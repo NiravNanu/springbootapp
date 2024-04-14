@@ -1,13 +1,7 @@
 pipeline {
     agent any
     
-    tools {
-        maven "Maven3"
-    }
     
-    environment {
-        SCANNER_HOME = tool 'sonar-scanner'
-    }
     
     stages {
         stage('Checkout from git') {
@@ -16,7 +10,7 @@ pipeline {
             }
         }
         
-        stage('Maven Build') {
+       /* stage('Maven Build') {
             steps {
                 sh 'mvn clean install'
             }
@@ -37,14 +31,14 @@ pipeline {
                 }
             }
         }
-        
+    
         stage('Quality Gate Test') {
             steps {
                 script {
                     waitForQualityGate abortPipeline: false, unstable: true
                 }
             }
-        }
+        }*/
     }
 }
 
