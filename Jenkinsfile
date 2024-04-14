@@ -41,8 +41,8 @@ pipeline {
                 script {
                     waitForQualityGate abortPipeline: false, unstable: true
                 }
-            }*/
-        }
+            }
+        }*/
     }
 }
 
