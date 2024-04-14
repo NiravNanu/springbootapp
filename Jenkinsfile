@@ -20,7 +20,7 @@ pipeline {
             }
         }
         
-        /*stage('Unit Test') {
+        stage('Unit Test') {
             steps {
                 echo '<----------------------Unit Test Under Progess------------------>'
                 sh 'mvn surefire-report:report'
@@ -28,7 +28,7 @@ pipeline {
             }
         }
         
-        stage('Sonarqube analysis') {
+        /*stage('Sonarqube analysis') {
             steps {
                 withSonarQubeEnv('sonar-server') {
                     sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=springbootapp -Dsonar.projectKey=springbootapp"
