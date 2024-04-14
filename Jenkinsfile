@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    tools {
+        maven "Maven3"
+      }
+
     
     
     stages {
@@ -10,13 +14,13 @@ pipeline {
             }
         }
         
-       /* stage('Maven Build') {
+        stage('Maven Build') {
             steps {
                 sh 'mvn clean install'
             }
         }
         
-        stage('Unit Test') {
+        /*stage('Unit Test') {
             steps {
                 echo '<----------------------Unit Test Under Progess------------------>'
                 sh 'mvn surefire-report:report'
@@ -37,8 +41,8 @@ pipeline {
                 script {
                     waitForQualityGate abortPipeline: false, unstable: true
                 }
-            }
-        }*/
+            }*/
+        }
     }
 }
 
