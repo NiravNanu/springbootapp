@@ -28,7 +28,7 @@ pipeline {
             }
         }
         
-        /*stage('Sonarqube analysis') {
+        stage('Sonarqube analysis') {
             steps {
                 withSonarQubeEnv('sonar-server') {
                     sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=springbootapp -Dsonar.projectKey=springbootapp"
@@ -42,7 +42,7 @@ pipeline {
                     waitForQualityGate abortPipeline: false, unstable: true
                 }
             }
-        }*/
+        }
     }
 }
 
